@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>简单网页布局</title>
+	<style type="text/css">
+
+	body {
+		margin: 0 auto;
+	}
+
+		#header,#siderLeft,#siderRight,#footer {
+			margin: 0 auto;
+		}
+
+		#header {
+			background-color: #ffff00;
+			width: 100%;
+		}
+
+		#siderLeft {
+			float: left;
+			background-color: #dddddd;
+			width: 20%;
+		}
+
+		#siderRight {
+			float: left;
+			background-color: #EEEEEE;
+			width: 80%;
+		}
+
+		#footer {
+			clear: both;
+			background-color: #ff00ff;
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+<div id="header" style="padding: 10px;">导航</div>
+<div id="siderLeft">
+	<div>
+		<ul style="margin: 0 auto;padding: 10px;">
+			<li>农业资讯</li>
+			<li>体育资讯</li>
+			<li>电子商务</li>
+		</ul>
+	</div>
+</div>
+<div id="siderRight">
+	<div style="margin:0 auto;">
+		<span style="padding: 10px; display: inline-block;">
+			中华人民共和国
+		</span>
+	</div>
+</div>
+<div id="footer"><label style="padding: 10px;display: block;">中华人民共和国</label></div>
+<div></div>
+</body>
+</html>
