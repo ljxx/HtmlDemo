@@ -13,6 +13,85 @@
 	</style>
 </head>
 <body>
-	<myHello>Hello World !!!</myHello>
+	<myHello>Hello World !!!</myHello><p/>
+
+	<canvas id="myCanvas" width="200" height="150"></canvas>
+	<script>
+		var c = document.getElementById("myCanvas");
+		var cxt = c.getContext("2d");
+		cxt.fillStyle = "#999";
+		cxt.fillRect(0,0,175,75);
+	</script><p/>
+
+<!-- 获取鼠标位置 -->
+	<div id="coordiv" style="width: 300px;height: 200px;border: 1px solid #999;" onmousemove="getXY(event)"></div>
+	<script>
+		function getXY(e){
+			var x = e.clientX;
+			var y = e.clientY;
+			document.getElementById("coordiv").innerHTML="鼠标的位置：(" + x + ", " + y + ")";
+		}
+	</script><p/>
+
+<!-- 画线条 -->
+	<canvas id="drawline" width="200" height="300" style="border: 1px solid #999;">
+		你的浏览器不支持canvas，建议更换谷歌浏览器
+	</canvas>
+	<script type="text/javascript">
+		var mDrawLine = document.getElementById("drawline");
+		var mCxt = mDrawLine.getContext("2d");
+		// 画线
+		mCxt.moveTo(10,10);
+		mCxt.lineTo(100,60);
+		mCxt.lineTo(10,60);
+		mCxt.stroke();
+
+		// 画圆
+		mCxt.fillStyle="#ff0000";
+		mCxt.beginPath();
+		mCxt.arc(45,45,10,0,Math.PI*2,true);
+		mCxt.closePath();
+		mCxt.fill();
+
+		// 渐变
+		var grd = mCxt.createLinearGradient(0,80,200,70);
+		grd.addColorStop(0,"#ff0000");
+		grd.addColorStop(1,"#00ff00");
+		mCxt.fillStyle = grd;
+		mCxt.fillRect(0,80,200,70);
+
+		//图像
+		var img = new Image();
+		img.src = "../simple001/image01/image003.gif";
+		mCxt.drawImage(img,0,160);
+	</script><p/>
+
+	<!-- 拖放 -->
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 200px; height: 60px;border: 1px solid #aaaaaa;"></div><br>
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="width: 200px; height: 60px; border: 1px solid #aaaaaa;">
+		<img id="drag1" src="image01/image004.gif" draggable="true" ondragstart="drag(event)">
+	</div>
+	
+	<script type="text/javascript">
+
+		function drag(ev){
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var mData = ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(mData));
+		}
+
+		
+	</script>
+
+
+
 </body>
 </html>
