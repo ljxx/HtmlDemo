@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>cssDemo</title>
+	<style type="text/css">
+		/*属性和值选择器*/
+		/*[title=test-title] {
+			color: red;
+		}*/
+
+		/*包含指定值的 title 属性的所有元素设置样式。适用于由空格分隔的属性值*/
+		/*[title ~= test] {
+			color: blue;
+		}*/
+
+		/*为带有包含指定值的 lang 属性的所有元素设置样式。适用于由连字符分隔的属性值*/
+		/*[title |= test] {
+			color: green;
+		}*/
+
+		/*匹配属性值以指定值开头的每个元素。*/
+		/*[title ^= test] {
+			color: red;
+		}*/
+
+		/*匹配属性值以指定值结尾的每个元素。*/
+		/*[title $= test] {
+			color: yellow;
+		}*/
+
+		/*匹配属性值中包含指定值的每个元素。*/
+		[title *= test] {
+			color: gray;
+		}
+
+		body {
+			background-image: url(image01/image001.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+
+		.spanspan {
+			/*word-spacing: 50px;*/
+			/*letter-spacing: 5px;*/
+			font-family: monospace;
+			text-transform: capitalize;
+			text-decoration: blink;
+		}
+
+		a:link {
+			text-decoration: none;
+			color: gray;
+		}
+
+		a:visited {
+			color: blue;
+		}
+
+		a:hover {
+			color: red;
+		}
+
+		a:active {
+			color: yellow;
+		}
+
+		ul {
+			list-style-type: circle;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		.position-p {
+			position: fixed;
+			top: 50px;
+			/*left: -20px;*/
+		}
+
+	</style>
+</head>
+<body>
+  <h3 title="test-title-test">这是一忙碌的一年</h3>
+  <h2 title="test-haha">这时一个收获的一年</h2>
+  <h1 title="test">美好的一天</h1><p/>
+
+  <hr>
+
+  <p class="spanspan">hello world</p>
+
+  <a href="#">a链接点样式</a><p/>
+
+  <ul>
+  	<li>中国</li>
+  	<ul>
+  		<li>北京</li>
+  		<li>上海</li>
+  		<ul>
+  		  <li>嘉定</li>
+  		  <li>闵行</li>
+  		</ul>
+  	</ul>
+  </ul><p/>
+
+  <table border="1">
+  	<tr>
+  		<th>序号</th>
+  		<th>名称</th>
+  		<th>工号</th>
+  	</tr>
+  	<tr>
+  		<td>1001</td>
+  		<td>海口市</td>
+  		<td>1902890</td>
+  	</tr>
+  </table><p/>
+
+  <p class="position-p">中华人民共和国</p>
+  d
+</body>
+</html>
