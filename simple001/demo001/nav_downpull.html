@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>下拉导航菜单</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			height: 600px;
+			background: -webkit-linear-gradient(rgb(9,79,116),#fff); /* Safari 5.1 - 6.0 */
+		    background: -o-linear-gradient(rgb(9,79,116),#fff); /* Opera 11.1 - 12.0 */
+		    background: -moz-linear-gradient(rgb(9,79,116),#fff); /* Firefox 3.6 - 15 */
+		    background: linear-gradient(rgb(9,79,116),#fff); /* 标准的语法（必须放在最后） */
+		    background-repeat: no-repeat;
+		    background-position: 0 40px;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background-color: rgb(9,79,116);
+		}
+
+		li {
+			float: left;
+		}
+
+		li a, .dropbtn {
+			display: inline-block;
+			color: white;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover, .dropdown:hover .dropbtn {
+			background-color: #00688B;
+			color: #F0F8FF;
+		}
+
+		.dropdown {
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #f1f1f1;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+
+	</style>
+</head>
+<body>
+<header>
+	<ul>
+  	<li><a class="active" href="#">首页</a></li>
+  	<li><a href="#news">新闻</a></li>
+  	<li><a href="#play">体育</a></li>
+  	<li><a href="#my">我的</a></li>
+  	<div class="dropdown">
+  		<a href="#" class="dropbtn">网站导航</a>
+  		<div class="dropdown-content">
+  			<a href="#">行业频道</a>
+  			<a href="#">生活频道</a>
+  			<a href="#">网商频道</a>
+  		</div>
+  	</div>
+  </ul>
+</header>
+</body>
+</html>
